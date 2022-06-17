@@ -11,6 +11,9 @@ spec:
     - name: apache-airflow
       image: postgres:11.5
       env:
-        POSTGRES_USER: airflow
-        POSTGRES_DB: airflow
-        POSTGRES_PASSWORD: airflow
+        - name: POSTGRES_USER
+          value: airflow
+        - name: POSTGRES_DB
+          value: airflow
+        - name: POSTGRES_PASSWORD
+          value: airflow
