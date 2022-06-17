@@ -1,0 +1,16 @@
+apiVersion: 1
+kind: deployment
+metadata:
+  name: apache-airflow
+  namespace: airflow
+  label:
+    app: apache-airflow
+
+spec:
+  containers:
+    - name: apache-airflow
+      image: postgres:11.5
+      env:
+        POSTGRES_USER: airflow
+        POSTGRES_DB: airflow
+        POSTGRES_PASSWORD: airflow
